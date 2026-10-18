@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognifyz Web Development Task 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Web Development Page</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="card">
+            <h2>Welcome to My Webpage</h2>
+            <p>
+                I am learning HTML and CSS as part of my
+                Cognifyz Technologies Web Development Internship.
+            </p>
+
+            <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700"
+                alt="Computer and web development workspace">
+        </section>
+
+        <section id="about" class="card">
+            <h2>About Me</h2>
+            <p>I am learning to create attractive and responsive websites.</p>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>Contact Form</h2>
+
+            <form id="contactForm">
+                <label for="name">Enter your name:</label>
+                <input type="text" id="name"
+                       placeholder="Enter your name" required>
+                <button type="submit">Submit</button>
+            </form>
+
+            <p id="message"></p>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById("contactForm")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value;
+
+                document.getElementById("message").textContent =
+                    "Thank you, " + name + "! Form submitted successfully.";
+            });
+    </script>
+
+</body>
+</html>
